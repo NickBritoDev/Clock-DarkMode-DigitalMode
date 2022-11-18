@@ -1,0 +1,31 @@
+body.dark{
+    background: #000000;  
+    background: -webkit-linear-gradient(to right,  #000000, #140b00);
+    background: linear-gradient(to right,    #000000, #140b00);
+}
+
+body.dark .clock-wrapper, body.dark .btn, body.dark .digital-clock{
+    background-color: black;
+    color: #ff8400;
+}
+
+body.dark .btn{
+    box-shadow: 0.3rem 0.3rem 0.6rem rgb(22, 22, 22);
+}
+
+body.dark .clock .seconds, body.dark .clock .point, body.dark .clock .mark{
+    background-color:#ff8400;
+    color: #ff8400;
+}
+
+body.dark .clock .hours, body.dark .clock .minutes{
+    background-color: aliceblue;
+}
+
+body.dark .clock .marks, body.dark .digital-clock, body.dark .clock, body.dark .btn:active{
+    box-shadow:  inset 0.3rem 0.3rem 0.6rem rgb(56, 56, 56),inset -0.3rem -0.3rem 0.6rem rgb(54, 54, 54); 
+}
+
+body.dark .clock-wrapper{
+    box-shadow: 10px 10px 50px rgb(32, 32, 32);
+}

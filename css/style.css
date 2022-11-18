@@ -1,0 +1,413 @@
+*{
+    font-family: 'Turret Road', cursive;
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    height: 100vh;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #808080;  
+    background: -webkit-linear-gradient(to right, #d7ebea, #808080);
+    background: linear-gradient(to right,  #d7ebea, #808080);
+}
+
+.clock-wrapper{
+    height: 50%;
+    width: 350px;
+    border-radius: 20px;
+    background-color: aliceblue;
+    padding: 20px;
+    box-shadow: 10px 10px 50px rgb(61, 57, 57);
+    display: flex;
+    flex-direction: column;
+}
+
+.clock-wrapper-head{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn{
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border-radius: 6px;
+    color: #3fada8;
+    font-size: 1.3rem;
+    background-color: aliceblue;
+    box-shadow: 0.3rem 0.3rem 0.6rem rgb(128, 128, 128);
+    transition: all 0.6s;
+}
+
+.btn:active{
+    box-shadow: inset 0.3rem 0.3rem 0.6rem rgb(128, 128, 128),inset -0.3rem -0.3rem 0.6rem rgb(219, 219, 219);
+    transition: ease-in-out 0.6s ;
+}
+
+.clock-wrapper-body{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.clock {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    justify-self: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0.3rem 0.3rem 0.6rem rgb(128, 128, 128);
+    margin-bottom: 15px;
+}
+
+.clock .hand{
+    position: absolute;
+    transform-origin: bottom;
+    bottom: 6rem;
+    border-radius: 0.2rem;
+    z-index: 10;
+}
+
+.clock .hours{
+    width: 0.3rem;
+    height: 3.2rem;
+    background-color: black;
+
+}
+
+.clock .minutes{
+    width: 0.2rem;
+    height: 4.0rem;
+    background-color: black;
+}
+
+.clock .seconds{
+    width: 0.1rem;
+    height: 4.2rem;
+    background-color:#3fada8;
+}
+
+.clock .point{
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: #3fada8;
+    z-index: 20;
+}
+
+.clock .marks {
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    position: relative;
+    box-shadow:  inset 0.3rem 0.3rem 0.6rem rgb(128, 128, 128),inset -0.3rem -0.3rem 0.6rem rgb(219, 219, 219); 
+}
+
+.clock .marks .mark{
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    width: 1px;
+    height: 2px;
+    background-color: #3fada8;
+    transform: rotate(0deg) translate(-50%);
+    transform-origin: 0 84px;
+}
+
+.clock .marks .mark::after{
+    content: "";
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    border-radius: 50%;
+    top: 20%;
+    left: 20%;
+}
+
+.digital-clock{
+    border-radius: 13px;
+    background-color: aliceblue;
+    box-shadow: inset 0.3rem 0.3rem 0.6rem rgb(128, 128, 128),inset -0.3rem -0.3rem 0.6rem rgb(219, 219, 219); 
+    height: 90px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #3fada8;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 0 20px;
+}
+
+.digital-clock > div {
+    position: relative;
+}
+
+.digital-clock > div:not(:last-child):after{
+    content: ":";
+    position: absolute;
+    right: -12px;
+    top: 0;
+}
+
+.clock .marks .mark:nth-child(5n-4){
+    width: 2px;
+    height: 8px;
+}
+
+.clock .marks .mark:nth-child(1){
+    transform: rotate(0deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(2){
+    transform: rotate(6deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(3){
+    transform: rotate(12deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(4){
+    transform: rotate(18deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(5){
+    transform: rotate(24deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(6){
+    transform: rotate(30deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(7){
+    transform: rotate(36deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(8){
+    transform: rotate(42deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(9){
+    transform: rotate(48deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(10){
+    transform: rotate(54deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(11){
+    transform: rotate(60deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(12){
+    transform: rotate(66deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(13){
+    transform: rotate(74deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(14){
+    transform: rotate(78deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(15){
+    transform: rotate(84deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(16){
+    transform: rotate(90deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(17){
+    transform: rotate(96deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(18){
+    transform: rotate(102deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(19){
+    transform: rotate(108deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(20){
+    transform: rotate(114deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(21){
+    transform: rotate(120deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(22){
+    transform: rotate(128deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(23){
+    transform: rotate(134deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(24){
+    transform: rotate(140deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(25){
+    transform: rotate(146deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(26){
+    transform: rotate(152deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(27){
+    transform: rotate(158deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(28){
+    transform: rotate(164deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(29){
+    transform: rotate(170deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(30){
+    transform: rotate(176deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(31){
+    transform: rotate(182deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(32){
+    transform: rotate(188deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(33){
+    transform: rotate(194deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(34){
+    transform: rotate(200deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(35){
+    transform: rotate(206deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(36){
+    transform: rotate(212deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(37){
+    transform: rotate(218deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(38){
+    transform: rotate(224deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(39){
+    transform: rotate(230deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(40){
+    transform: rotate(236deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(41){
+    transform: rotate(242deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(42){
+    transform: rotate(248deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(43){
+    transform: rotate(254deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(44){
+    transform: rotate(260deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(45){
+    transform: rotate(266deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(46){
+    transform: rotate(272deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(47){
+    transform: rotate(278deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(48){
+    transform: rotate(284deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(49){
+    transform: rotate(290deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(50){
+    transform: rotate(296deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(51){
+    transform: rotate(300deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(52){
+    transform: rotate(306deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(53){
+    transform: rotate(312deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(54){
+    transform: rotate(318deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(55){
+    transform: rotate(324deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(56){
+    transform: rotate(330deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(57){
+    transform: rotate(336deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(58){
+    transform: rotate(342deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(59){
+    transform: rotate(348deg) translate(-50%);
+}
+
+.clock .marks .mark:nth-child(60){
+    transform: rotate(354deg) translate(-50%);
+}
+
